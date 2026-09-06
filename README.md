@@ -4,35 +4,6 @@ An offline-capable web app for the ski-mountaineering block: two strength days, 
 aerobic sessions, one muscular-endurance session, free weekends. It auto-progresses
 from a single effort tap per exercise.
 
----
-
-## Put it on your iPhone (about 10 minutes, once)
-
-Everything below happens in a browser. No git, no command line, no Xcode.
-
-1. **Make a GitHub account** at github.com if you don't have one.
-2. **Create a repository.** Click **+** → *New repository*. Name it `skimo`.
-   Set it to **Public** (GitHub Pages needs this on free accounts). Click *Create*.
-3. **Upload the files.** On the repo page click *Add file* → *Upload files*, then drag in
-   all five: `index.html`, `manifest.webmanifest`, `sw.js`, `icon-192.png`, `icon-512.png`.
-   Click *Commit changes*.
-4. **Turn on Pages.** Go to *Settings* → *Pages* (left sidebar). Under **Source** pick
-   *Deploy from a branch*, branch `main`, folder `/ (root)`. Click *Save*.
-5. **Wait 1–2 minutes**, then reload that Settings page. It shows your URL —
-   something like `https://yourname.github.io/skimo/`.
-6. **On your iPhone**, open that URL in **Safari** (must be Safari, not Chrome).
-   Tap the **Share** button → **Add to Home Screen** → *Add*.
-
-You now have an app icon. Open it from there, not from Safari — that's what gives you
-the full-screen view and reliable offline storage.
-
-### Updating it later
-Drag a replacement `index.html` into the repo (*Add file* → *Upload files*, same
-filename, *Commit*). Reopen the app twice — once to fetch, once to run the new version.
-Your logged data is untouched by updates.
-
----
-
 ## Using it
 
 **Strength days.** Tap each set as you finish it; the rest timer starts automatically.

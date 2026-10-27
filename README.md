@@ -79,7 +79,7 @@ e1RM: {
 },
 aerobic: {
   currentWeeklyMinutes: 120,  // your ACTUAL recent volume, not a target
-  capMinutes: 480,            // weekly ceiling, includes the ME session
+  capMinutes: 480,            // weekly ceiling for aerobic base only — ME is not counted
   aetBpm: 120, antBpm: null
 },
 me: { peakPackKg: 15, peakDurationMin: 60 }
@@ -243,8 +243,23 @@ they aren't informative and would drag the estimate down.
 ## Aerobic and endurance
 
 Rule-based, not tabular. A loading week is the previous *loading* week × 1.10; every fourth
-week steps back to 65%; a hard weekly ceiling includes the ME session. From 120 min/week,
+week steps back to 65%; a hard weekly ceiling applies to aerobic minutes only (ME sits outside it). From 120 min/week,
 cycle 1 runs **180 → 200 → 220 → 145↓ → 240 → 265 → 290 → 190↓ minutes**.
+
+### ME is hard work, not base
+
+The muscular endurance session is kept completely separate from aerobic base building.
+Its minutes never count toward the weekly base total or the cap, never reduce base minutes,
+and whatever heart rate you log there has no effect on base progression or the next
+cycle's starting volume. Heart rate above your AeT is expected during ME; if you have set
+an AnT, that is the soft ceiling and going above it on average gets a note. Only the
+deload-week ME session is meant to stay easy.
+
+Hard work gets its own line in the weekly summary: the whole ME session (except in deload
+weeks) plus the work bouts of an interval session. If that's more than 20% of the week's
+time, or ME and intervals land on consecutive days, the summary shows a warning. Warnings
+never change the plan. A small orange mark above a week's bar at the top means that week
+has a hard ME session; bar heights show aerobic base only.
 
 Progress is **more vertical at the same heart rate** — never a higher heart rate. Once you
 hit the cap, volume freezes and vert-per-hour at a fixed heart rate becomes the only metric.
@@ -320,6 +335,9 @@ your own logged data will answer.
 | Estimate update on a deload | — | skipped |
 | Estimate update where reps + RIR > 15 | — | skipped |
 | Three hard sessions in one week | ME + intervals + long day | warns |
+| Hard minutes share of the week | over 20% | warns |
+| ME and intervals on consecutive days | — | warns |
+| ME average HR above AnT | when AnT is set | warns |
 | ME speed field | — | never exposed |
 | Maintenance ranked first | — | refused |
 | Resensitization with other goals | — | refused |

@@ -415,6 +415,20 @@ reasons to override it, an injury being the obvious one, so it asks rather than 
 
 ---
 
+## Works without the host
+
+After the first open with a connection, the app runs from a copy stored on the phone. On each
+open it asks the host for a newer version but waits at most 3 seconds. If the host is down,
+returns an error page, hangs, or there's no signal, the stored copy opens instead, and an
+error page never replaces it. If the host is just slow, the new version keeps downloading
+in the background and is used the next time you open the app. Your logs live on the phone
+and are never affected by the host.
+
+To get a new version onto the phone: open the app once with a connection, close it, open it
+again.
+
+---
+
 ## Finishing a cycle
 
 "Finish cycle → start next" carries your estimated maxes forward, reseeds aerobic volume
